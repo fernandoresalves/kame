@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "2462e05a-3d69-44c4-bc15-7fdbd1776c82",
+		"name": "Kame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "699213"
+	},
+	"item": [
+		{
+			"name": "Get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "postman",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "388D45FA-B36B-4988-BA59-B187D329C207",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44396/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get resource (send token)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiI5RjNBREVDMzRGRjg3REM3OEU4QkM1OEUxNjRBOTkwN0FBQUZGODIyIiwidHlwIjoiYXQrand0In0.t19UEKULg-wfdyPP5_VirznmkDlbwNnbTYVaZb10YRv-snRTImb1ajwVPu4DRU7imPMiijqdWz57OD6ZsNiXj0WbK5atuah-wFKZkKH2JQag5MOS_OAycckp5zo_Y91uFCeLmu0FIZgyHmSeWvqmPZzd-Yycm1CyuEJg8nwi4PmHnT5-BJNTtkakiEKT23WFJpFv_odQzqFiGq9AgmKKPSzaFTBiLuZko89pLU3d_SD-EuwRmbepquwAyL8_1v_KmpMtD8jlDgBb0JDgLhbPh9ynoWbIny3JMGHiiRMeXbLNjgVJwhRndFczvHxrWNiC1CEn5GgFGOjw4ROTe4nXXQ.V8Zm5-L_Tip-0WlA8wnWxA.fDRjAZykVQqGA4oQVkBirJHFa9-8b70FX-MCfqs-PI8Rch6ohKsU4yPYXSWYK6sxsRs1T5Gl8WTWpuxnzsTB4V09C6s91r-4PxRZfQhhTyQoAuUAeSIIKzLUdvYrqpZ24oGYa4uFPPXuQ5ugIvvlkoBmv_Wa_Cg-TlCd4_ShjzNS9JzYzXMVX27ZYewlgS3aSJQOTZn60tlQyECJJo-4KPAkaemSIBGAKwxRDichCr6e_bnsbWWK1H12d0NVI2E3OdTcbINMcpDMmHNuTPd6wm7gIGPSpJgyj2kRX-NExqU65LqVOyidDm2lvTrl1KJuBUU6YVPBL1qBgutla8_ICSLJvAmplCRZHLOcEnTkBjHbS0ajNgBpobmSnzeFj2WtDpDz2ROnJclsPECgTRu1v0lqIPYJ9unqoFsc_1XR4y4wyQr2ihAfv51IH8S2IzAyqbMdKIv5pmfl9_N9PkKD6rkWxPpkooH3hJVfYaYOR81k7PdVuGsbIN39AZHT8ShJ9e6Oa4MeEXKPsRxe58PShTlfbLFzqkVa2ePd5jM1U7lbFHgJWkf5hjk_-d3Ntq7g3de_0EgR7EJNA7mTz-i1-2t39suw99lCA-ydUaI5rGE16gJPEesTQCO9O1nw3txayH5AN5REsrJLakg1IFD_Zw0T9UXwW6pZZ5RXb_KIYJIhBX3fLCmPfUz4-Ol-nKCq-YZyP7WHMZWu6Onr0aU2CrD_Y_nS3EJWJJ9-5LJmYthuwoiLKkgIuTe_R79aGnDLlaIil9LLPHgTuqEy5YXNfxg7RvUkaTLPIRKg-4tsGa2jRradj-vUJ7Lh0r-GppMV5zzVgJFUZaLTKvmqFQ7FtNLY4amUN69v1sgtRgUG8ByDikFKZV9eux6JIGHNH3a1jqYS8SQ3g1pe2teWFu8iKu5J9DvAJTVgTTuZ8_SDwC_6DOUmz2EGwDN2YMga_WS5ypjIRtCQ4LV5s81Snx-qK7yAQKfMRKDnlRuRcV8R4UeWwLXlPYCNA_FPM91Uc22NrKHhEuXg_nDTEDgZaYycuw.4FIWmcDAxf_4wvarZg2jPfdjy69XxxSMcYiwiY8nwXY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/api/message",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"api",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get configuration (Authorization Server)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44396/.well-known/openid-configuration",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						".well-known",
+						"openid-configuration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
